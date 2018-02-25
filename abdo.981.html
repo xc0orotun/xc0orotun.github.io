@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en-uk">
+<head>
+ <!-- best unicode -->
+ <meta charset="UTF-8">
+ <!-- devices Width -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- some meta -->
+ <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+ <meta name="author" content="Joseph&#8313;&#8313;">
+ <meta name="description" content="One of people, who love coding very much eveydays i am write the code, anytime anywhere!"/>
+ <!-- title -->
+<title>abdo.981</title>
+ <!-- Google fonts -->
+ <link href="https://fonts.googleapis.com/css?family=Harmattan" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Mada" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=El+Messiri" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Nixie+One" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+ <!-- layout -->
+ <link type="text/css" rel="stylesheet" href="/assets/endEleven.css"/>
+ <!-- icons of the page  -->
+ <link href="https://xc0orotun.github.io/abdo.981.jpeg" rel="shortcut icon">
+ <link rel="apple-touch-icon" sizes="180x180"  href="https://xc0orotun.github.io/abdo.981.jpeg">
+ <!-- Fontawesome 4.7.0 -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/*
+  Created by @xc0orotun
+  Sunday 25 February 2018 9:16pm
+*/
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+/* 
+  A new burger menu modified my @xc0orotun
+*/
+body h1 {
+  position: fixed;
+  top: 3px;
+  left: 40px;
+  z-index: 6;
+  font-size: 20px;
+  font-weight: 900;
+  color: #4682b4;
+  font-family: 'Raleway', sans-serif;
+}
+body h1 > span {
+  text-transform: none;
+  opacity: .5;
+  font-weight: 300;
+  font-size: 12px;
+  color: #4682b4;
+  font-family: 'Raleway', sans-serif;
+}
+/*hide the inputs*/
+input {
+  display:none;
+}
+body input + label.main1 {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 20px;
+  width: 30px;
+  z-index: 5;
+}
+body input + label.main1 span {
+  position: absolute;
+  border-radius:3px;
+  width: 25px;
+  height: 3px;
+  top: 30%;
+  margin-top: -4px;
+  left: 0;
+  display: block;
+  background: #4682b4; /* menu color */
+  transition: .3s;
+}
+body input + label.main1 span:first-child {
+  top: 3px;
+}
+body input + label.main1 span:last-child {
+  top: 16px;
+}
+body label.main1:hover {
+  cursor: pointer;
+}
+body input:checked + label.main1 span {
+  opacity: 0;
+  top: 50%;
+}
+body input:checked + label.main1 span:first-child {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+body input:checked + label.main1 span:last-child {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+body input ~ center nav {
+  background:#87ceeb; /* burger background color */
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  right:5px;
+  width: auto !important; 
+  height: 40px;
+  z-index: 3;
+  transition: .35s;
+  transition-delay: .1s;
+  overflow: hidden;
+  border-radius: 5px;
+  border:3px solid #87ceea; /* border menu color */
+  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.1);
+ 
+}
+body input:checked ~ center nav {
+  background:#87ceec;
+  height: 100%!important;
+  top:0;
+  left:0;
+  right:0;
+  border-radius:0px;
+  transition-delay: 0s;
+  padding-top:90px;
+  border:0px;
+}
+body input:checked ~ center nav {
+  opacity: 1;
+  transition-delay: .1s;
+  transition: .3s;
+}
+body input:checked ~ center nav > div {
+ padding:19px;
+ transition: .3s;
+}
+a {
+  display: none;
+}
+body input:checked ~ center nav > div > a {
+  text-decoration: none;
+  font-size:20px;
+  color: black; /* a tag color LINK */
+  display: block;
+  padding-top:5px;
+  padding-bottom:5px;
+  border-radius:5px;
+  transition: .3s;
+  font-family: 'Josefin Slab', serif;
+}
+/*
+  End of burger menu
+*/
+/*
+  CSS for main content after burger menu
+*/
+/*
+  more social links !
+*/
+body input:checked ~ center nav > div.a {
+  display:inline-block;
+}
+body input:checked ~ center nav > div.a > a.social {
+  font-size: 30px;
+  text-decoration: none;
+  color:#1e90ff;
+}
+body input:checked ~ center nav > div.a > a.social:hover {
+  background:none;
+  color:black;
+}
+body{
+  padding-top:125px;
+}
+.card {
+  margin: 1px; 
+  padding-top:5px;
+  padding-left:5px;
+  padding-right:20px;
+  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 15px 15px 15px 15px;
+  background-color:#00bfff;
+  padding-bottom:20px;
+}
+.more-style {
+  width:15px;
+  height:15px;
+  background:#1e90ff;
+  font-size:12px;
+  color:#dcdcdc;
+  border-radius:50px;
+  margin-right:100%;
+  margin-top:-15px;
+  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+  border:.5px solid black;
+}
+.more-style2 {
+  width:15px;
+  height:15px;
+  background:#1e90ff;
+  font-size:12px;
+  color:#dcdcdc;
+  border-radius:50px;
+  margin-left:100%;
+  margin-top:-0px;
+  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+  border:.5px solid black;
+}
+img{
+   border: 2px solid black;
+   border-radius: 80px;
+   box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+   margin-top:-100px;
+   margin-right:-11px;
+}
+h2.end9-title {
+  font-family: 'El Messiri', sans-serif;
+  margin-right:-10px;
+  margin-top:-1px;    
+  font-size:20px;
+}
+.me {
+  margin-right:-15px;
+  font-family: 'Josefin Slab', serif;
+}
+.card2 {
+  margin-top: 10px; 
+  padding-top:5px;
+  padding-left:5px;
+  padding-right:20px;
+  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 15px 15px 15px 15px;
+  background-color:#00bfff;
+  padding-bottom:20px;
+}
+.card-in-card2{
+  border:1px solid black;
+  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 15px 15px 15px 15px;
+  background:#87ceec;
+  margin-right:-15px;
+  margin-top:15px;
+  padding-top:10px;
+  text-align:right;
+  padding-right:20px;
+  padding-left:20px;
+  padding-bottom:20px;
+}
+.gift1 {
+  font-size:20px;
+  font-family: 'Harmattan', sans-serif;
+  margin:10px;
+}
+.gift3 {
+  font-family: 'Droid Arabic Naskh', serif;
+}
+.me6 > label.me3 {
+  color:black;
+  font-family: 'Harmattan', sans-serif;
+  padding:5px;
+}
+input.me2:checked ~ .me6 > label.me3 {
+  color:#f8f8ff;
+}
+.dropdown-content {
+  display: none;
+}
+input.me2:checked ~ .dropdown-content {
+  display: block;
+  padding:8px;
+  font-family: 'Mada', sans-serif;;
+  border-radius:5px;
+}
+.card3 {
+  margin-top: 10px; 
+  padding-top:5px;
+  padding-left:5px;
+  padding-right:20px;
+  border-radius: 15px 15px 0px 0px;
+  background-color:#00bfff;
+  padding-bottom:5px;
+  margin-bottom:1px;
+  font-family: 'Josefin Slab', serif;
+}
+.card4 { 
+  padding-top:5px;
+  padding-left:5px;
+  padding-right:20px;
+  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+  border-radius: 0px 0px 15px 15px;
+  background-color:#00bfff;
+  padding-bottom:5px;
+  border-top:.5px solid #1e90ff;
+  font-family: 'Josefin Slab', serif;
+}
+.copyrights {
+  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.1);
+  height: 15px;
+  width: 90%;
+  background-color: #dcdcdc;
+  font-family: 'Josefin Slab', serif;
+  border-radius: 3px;
+  margin-top:13px;
+  font-size:10px;
+}
+</style>
+</head>
+
+<body id="top">
+<h1>abdo<span>.981</span></h1>
+
+<input id="burger" type="checkbox" />
+<label class="main1" for="burger">
+ <span></span>
+ <span></span>
+</label>
+<center>
+<nav>
+ <div>
+  <a href="#">Contact Me<div>abdo.981</div></a>
+ </div>
+ <div class="a">
+  <a class="social" href="http://twitter.com/abdullhaadi99">
+   <i class="fa fa-twitter"></i>
+  </a>
+ </div>
+ <div class="a">
+   <a class="social" href="http://instagram.com/abdo.981">
+     <i class="fa fa-instagram"></i>
+   </a>
+ </div>
+ <div class="a">
+   <a class="social" href="http://snapchat.com/add/abdo.981">
+    <i class="fa fa-snapchat"></i>
+   </a>
+ </div>
+ <div class="a">
+   <a class="social" href="https://api.whatsapp.com/send?phone=96897608035">
+    <i class="fa fa-whatsapp"></i>
+   </a>
+ </div>
+</nav>
+ <div class="card">
+  <div class="more-style2">
+   <i class="fa fa-close"></i>
+  </div>
+  <div class="more-style">
+   <i class="fa fa-close"></i>
+  </div>
+  <img src="https://xc0orotun.github.io/abdo.981.jpeg" alt="me" width="100" height="100"/>
+          <h2 class="end9-title">عبدُالهآدي الساعدي</h2>
+   <div class="me">Australia 🇦🇺 Petroleum Engineering</div>
+ </div>
+ <div class="card2"> 
+  <div class="more-style2">
+   <i class="fa fa-close"></i>
+  </div>
+  <div class="more-style">
+   <i class="fa fa-close"></i>
+  </div>
+ <div class="card-in-card2">
+    <div class="gift1">
+     ك عربون صداقة اهديك هذيه الصفة كهديه و كمصمم صفحات مبتداء
+    </div>
+    <div class="gift3">
+  الصراحة اذيه مجرد هدية بسيطة من شخص عادي اذيه آخر تصميم و صلتله حالياً  وحبيت اصمم اذيه الصفحة خصيصاً لك لانك شخص ممكن يستقبل اذيه الهدية الغربيه حبيت اجيبها بطريقة غريبة ممكن و لا شخص سواها مثلي . عبدو معرف هيش اقولك بضبط اقبلها كهديه و كصفحة شخصية لك ، و إذا حاب اضيف اي معلومات ثانيه او اي تعديل تريدة بس قولي و ان شاء الله اضبطها لك.
+ربيعك يوسف الحكماني 😂😂✌🏻
+    </div>
+  <input class="me2" id="me1" type="checkbox" />
+  <div class="me6">
+  <label class="me3" for="me1">
+<b>اضغط هنا</b>
+  </label>
+  </div>
+
+  <div class="dropdown-content">
+<hr/>
+اذا المرء لا يرعاك الا تكلفا
+ <div></div>
+فدعه ولا تكثر عليه التأسفا
+<div>***</div>
+ففي الناس أبدال وفي الترك راحة 
+<div></div>
+وفي القلب صبر للحبيب ولو جفا
+<div>***</div>
+فلا كل من تهواه يهواك قلبه 
+<div></div>
+ولا كل من صافيته لك قد صفا
+<div>***</div>
+اذا لم يكن صفو الوداد طبيعة 
+<div></div>
+فلا خير في ود يجيء تكلفا
+<div>***</div>
+ولا خير في خل يخون خليله 
+<div></div>
+ويرميه من بعد المودة بالجفا
+<div>***</div>
+سلام على الدنيا اذا لم يكن بها 
+<div></div>
+صديق صدوق صادق الوعد منصفا
+<hr/>
+<div>الامام الشافعي</div>
+   </div>
+  </div>
+</div>
+<div class="card3">
+ For the best friend
+</div>
+<div class="card4">
+ Was built by: HTML CSS
+</div>
+<div class="copyrights">
+Copyright &copy; 2018 Joseph&#8313;&#8313; - All Rights Reserved
+  </div>
+ <center>
+</body>
+</html>
