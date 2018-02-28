@@ -13,3 +13,4 @@ This some tweaks which I installed on my idevice. Info of my idevice above !^
 2.NewTerm 2 v2.0~beta3
 3.LittleX v1.3.4 
 4.System Info v1.2.1 
+5.Exlipse X Beta 7 v5.0b-25
