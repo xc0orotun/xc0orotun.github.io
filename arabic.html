@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="EN-UK">
+<head>
+  <!-- unicode -->
+ <meta charset="UTF-8" />
+  <!-- devices Width -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- some metas -->
+ <meta name="keywords" content="HTML,CSS,JavaScript">
+ <meta name="author" content="Joseph&#8313;&#8313;">
+ <meta name="description" content="endfourteen"/>
+<title>ذكريات</title>
+<style>
+/* styling body */
+body {
+  margin-top: 60px;
+}
+/* styling input */
+input.show-hide {
+  display: none;
+}
+/* styling label */
+label.burger {
+  position: fixed;
+  color: black;
+  top: 13px;
+  left: 13px;
+  z-index: 2;
+}
+/* styling label checked */
+input.show-hide:checked ~ label.burger {
+  top: 18px;
+}
+/* styling bur */
+.buri {
+  width: 30px;
+  height: 5px;
+  margin-bottom: 5px;
+  background-color: black;
+  border-radius: 1.5px;
+  transition: .3s;
+}
+.burii {
+  width: 30px;
+  height: 5px;
+  margin-top: 5px;
+  background-color: black;
+  border-radius: 1.5px;
+  transition: .3s;
+}
+/* styling bur checked */
+input.show-hide:checked ~ label.burger > .buri {
+  transform: rotate(-135deg);
+  margin-bottom: -5px;
+}
+input.show-hide:checked ~ label.burger > .burii {
+  transform: rotate(135deg);
+  margin-top: -5px;
+}
+/* styling navs */
+.navs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0px;
+  height: 40px; 
+  background-color: ;
+  border-bottom: 1px solid #999;
+}
+/* styling drop-menu */
+.menu {
+  position: fixed;
+  left: 0px;
+  top: 40px;
+  width: 100%;
+  height: 0;
+  background-color:;
+  transition: .3s;
+  z-index: 1;
+  padding-left: 0px;
+  padding-right: 0px;
+  transition-delay: .4s;
+  border-bottom: 1px solid #999;
+}
+/* styling checked drop-menu */
+input.show-hide:checked ~ center > .menu {
+  height: 100%;
+  transition-delay: .2s;
+  transition: .4s;
+}
+/* styling avatar */
+img{
+  border: 2px solid white;
+  border-radius: 80px;
+  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+  visibility: hidden;
+  margin-top: 10%;
+  transition: opacity 0.3s linear;
+  opacity: 0;
+  transition: opacity .3s;
+  transition-delay: .3s;
+}
+input.show-hide:checked ~ center > .menu > img {
+  visibility: visible;
+  transition: visibility 0 linear 0.5s, opacity 0.5s linear;
+  transition: opacity .5s;
+  opacity: 1;
+  transition-delay: .5s;
+}
+/* styling cards */
+.cards {
+  height: 700px;
+  width: 96%;
+  background-color: ;
+  z-index: -1;
+  border: 1px solid #999;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+  border-bottom: 1px solid #999;
+}
+/* styling foter */
+.foter {
+  position: fixed;
+  bottom: 5px;
+  left: 5%;
+  right: 5%;
+  height: 20px;
+  font-size: 10px;
+  border: 1px solid #999;
+  z-index: -2;
+  text-align: center;
+  text-shadow: 1px 1px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<!-- input -->
+<input class="show-hide" id="showhide" type="checkbox" />
+<!-- label burger and burs -->
+<label class="burger" for="showhide">
+ <div class="buri"></div>
+ <div class="burii"></div>
+</label>
+<!-- navs -->
+<div class="navs"></div>
+<center>
+ <!-- dorp-menus -->
+ <div class="menu">
+  <img src="https://xc0orotun.github.io/" alt="me" width="100" height="100"/>
+  <div class="menu-in">
+   <p>
+    <a href="#">اختبار</a>
+    <a href="#">اختبار</a>
+    <a href="#">اختبار</a>
+   </p>
+  </div>
+ </div>
+</center>
+<body>
+<center>
+  <!-- card -->
+ <div class="cards"></div>
+</center>
+</body>
+ <!-- footer -->
+<div class="foter">Copyright &copy; 2018 Joseph&#8313;&#8313; - All Rights Reserved</div>
+</html>
