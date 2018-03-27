@@ -9,213 +9,11 @@
  <meta name="keywords" content="HTML,CSS,JavaScript">
  <meta name="author" content="Joseph&#8313;&#8313;">
  <meta name="description" content="اجمل الذكريات لربع يوب كنا في الصف ١١ و ١٢ "/>
+  <!-- Google fonts -->
+ <link href="https://fonts.googleapis.com/css?family=El+Messiri" rel="stylesheet">
+  <!-- cascading style sheets -->
+<link type="text/css" rel="stylesheet" href="assets/friendship.css"/>
 <title>ذكريات</title>
-<style>
-/* styling body */
-body {
-  margin-top: 60px;
-}
-/* styling input */
-input.show-hide {
-  display: none;
-  display: fixed;
-}
-/* styling label */
-label.burger {
-  position: fixed;
-  color: black;
-  top: 13px;
-  left: 13px;
-  z-index: 2;
-}
-/* styling label checked */
-input.show-hide:checked ~ label.burger {
-  top: 18px;
-}
-/* styling bur */
-.buri {
-  width: 30px;
-  height: 5px;
-  margin-bottom: 5px;
-  background-color: white;
-  border-radius: 1.5px;
-  transition: .3s;
-  box-shadow: 0 0px 15px 0px rgba(0,0,0,0.4);
-}
-.burii {
-  width: 30px;
-  height: 5px;
-  margin-top: 5px;
-  background-color: white;
-  border-radius: 1.5px;
-  transition: .3s;
-  box-shadow: 0 0px 15px 0px rgba(0,0,0,0.4);
-}
-/* styling bur checked */
-input.show-hide:checked ~ label.burger > .buri {
-  transform: rotate(-135deg);
-  margin-bottom: -5px;
-}
-input.show-hide:checked ~ label.burger > .burii {
-  transform: rotate(135deg);
-  margin-top: -5px;
-}
-/* styling navs */
-.navs {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 40px; 
-  background-color: #c0c0c0;
-  border-bottom: 3px solid #a9a;
-}
-/* styling drop-menu */
-.menu {
-  position: fixed;
-  top: 40px;
-  height: 0;
-  left: 0;
-  right: 0;
-  background-color: #c0c0c0;
-  transition: .3s;
-  z-index: 1;
-  transition-delay: .4s;
-}
-/* styling checked drop-menu */
-input.show-hide:checked ~ center > .menu {
-  height: 100%;
-  transition-delay: .2s;
-  transition: .4s;
-}
-/* styling avatar */
-img.myPic {
-  border: 2px solid white;
-  border-radius: 80px;
-  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
-  visibility: hidden;
-  margin-top: 10%;
-  transition: opacity 0.3s linear;
-  opacity: 0;
-  transition: opacity .3s;
-  transition-delay: .3s;
-}
-input.show-hide:checked ~ center > .menu > img.myPic {
-  visibility: visible;
-  transition: visibility 0 linear 0.5s, opacity 0.5s linear;
-  transition: opacity .5s;
-  opacity: 1;
-  transition-delay: .5s;
-}
-/* styling menu-in */
-center > .menu > .menu-in {
-  visibility: hidden;
-  opacity: 0;
-  margin-top: 30px;
-}
-input.show-hide:checked ~ center > .menu > .menu-in {
-  visibility: visible;
-  transition: visibility 0 linear 0.6s, opacity 0.6s linear;
-  transition: opacity .6s;
-  opacity: 1;
-  transition-delay: .6s;
-}
-/* styling options */
-center > .menu > .menu-in > p > a.options {
-  font-size: 15px;
-  padding: 2.5px 15px 2.5px 15px;
-  text-decoration: none;
-  border-radius: 3px;
-  margin: 0 15px 0 15px;
-  color: black;
-}
-center > .menu > .menu-in > p > a.options:hover {
-   background-color: white;
-   color: black;
-   box-shadow: 0 0px 15px 0px rgba(0,0,0,0.4);
-   border: 0.5px solid #999;
-}
-/* Popup container - can be anything you want */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-/* Toggle this class - hide and show the popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-/* styling cards */
-.cards {
-  height: 700px;
-  width: 98%;
-  background-color: #dcdcdc;
-  z-index: -1;
-  border: 1px solid #999;
-  border-radius: 8px;
-  margin-bottom: 40px;
-  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-}
-.cards > img.classPic {
-  margin-top: 30px;
-  border: 2px solid #fff;
-  border-radius: 80px;
-  box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
-}
-/* styling foter */
-.foter {
-  position: fixed;
-  bottom: 5px;
-  left: 0;
-  right: 0;
-  height: 20px;
-  font-size: 10px;
-  z-index: -2;
-  text-align: center;
-}
-</style>
 </head>
 <!-- input -->
 <input class="show-hide" id="showhide" type="checkbox" />
@@ -232,8 +30,7 @@ center > .menu > .menu-in > p > a.options:hover {
   <img class="myPic" src="https://xc0orotun.github.io/me.jpeg" alt="me" width="100" height="100"/>
   <div class="menu-in">
    <p>
-    <a class="options" href="#">اتصل بي</a>
-    <a class="options" href="#">المطور</a>
+    <a class="options" href="/">المطور</a>
     <div class="popup" onclick="myFunction()">Thanks
   <span class="popuptext" id="myPopup">كل الشكر لاصدقاء الصف <٤</span>
     </div>
@@ -245,9 +42,49 @@ center > .menu > .menu-in > p > a.options:hover {
 <center>
   <!-- card -->
  <div class="cards">
-  <img class="classPic" src="" alt="Class picture" width="100" height="100"/>
-  <p class="title1">بيت الوفاء</p>
+  <img class="classPic" src="" alt="Uplaoding..." width="100" height="100"/>
+  <p class="title1"> 3/1بيت الوفاء 11-2</p>
  </div>
+ <div class="cards2">
+ <p class="title2">The Photos </p>
+ <hr />
+ <div></div>
+ <div></div>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+ <li> <img class="photomates" src="" alt="Uploading..."/>
+ </li>
+</div>
 </center>
 </body>
  <!-- footer -->
